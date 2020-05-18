@@ -13,7 +13,7 @@ class StudentsController < ApplicationController
 
   def create
     byebug
-    @student = Student.create(params[:student])
+    @student = Student.create(first_name: params[:first_name], last_name: params[:last_name])
     redirect_to students_path(@student)
   end
 
