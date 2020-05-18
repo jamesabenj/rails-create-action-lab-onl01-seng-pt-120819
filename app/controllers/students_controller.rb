@@ -12,7 +12,7 @@ class StudentsController < ApplicationController
   end
 
   def create
-    @student = Student.create(params)
+    @student = Student.create(params[:student])
     redirect_to students_path(@student)
   end
 
